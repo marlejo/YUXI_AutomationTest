@@ -23,5 +23,17 @@ public class MainPage extends Base{
 		waitToBeClickable(logoutSidebarLink);
 		clic(logoutSidebarLink);
 	}
+	
+	public void buySauceLabsOnesie() {
+		clic(fifthAddToCartBtn);
+	}
+	
+	public void buySauceLabsBikeLight() {
+		clic(secondAddToCartBtn);
+	}
+	
+	public void goToCartPage() {
+		clic(shoppingCartBtn);
+	}
 
 }

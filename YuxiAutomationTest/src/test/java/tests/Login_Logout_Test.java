@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 import pages.MainPage;
 
+//Login and logout (Basic and alternate courses) with all the users
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Login_Logout_Test {
 	
@@ -29,7 +30,7 @@ public class Login_Logout_Test {
 
 	@AfterClass
 	public static void tearDown() throws Exception {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test
@@ -59,6 +60,18 @@ public class Login_Logout_Test {
 	
 	@Test
 	public void E_logoutProblemUserTest() {
+		mainPage.logout();
+		assertTrue(loginPage.isDisplayed(loginPage.LoginBtn));
+	}
+	
+	@Test
+	public void F_loginPerformanceGlitchUserTest() {
+		loginPage.loginPerformanceGlitchUser();
+		assertTrue(mainPage.getText(mainPage.productsLabel).equals("Products"));
+	}
+	
+	@Test
+	public void G_logoutPerformanceGlitchUserTest() {
 		mainPage.logout();
 		assertTrue(loginPage.isDisplayed(loginPage.LoginBtn));
 	}

@@ -41,6 +41,10 @@ public class Base {
 		return driver.findElement(locator).getText();
 	}
 	
+	public String getValue (By locator) {
+		return driver.findElement(locator).getAttribute("value");
+	}
+	
 	public void type(String text,By locator) {
 		driver.findElement(locator).sendKeys(text);
 	}
