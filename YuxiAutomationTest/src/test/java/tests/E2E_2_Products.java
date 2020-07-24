@@ -38,7 +38,7 @@ public class E2E_2_Products {
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test
